@@ -1,5 +1,8 @@
 import math
 
+def is_prime(n):
+    return n > 1 and all(n % i for i in range(2, int(n ** 0.5) + 1))
+
 def divisors(n):
     return [d for d in range(2,n//2+1) if n % d == 0 ]
 # Returns the prime numbers of n
@@ -52,3 +55,6 @@ def quersumme(n):
         s += n % 10
         n //= 10
     return s
+
+def palindrom_check(a):
+    return str(a) == str(a)[::-1]
